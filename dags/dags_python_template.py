@@ -31,5 +31,5 @@ with DAG(
         print('data_interval_end :' + str(kwargs['data_interval_end']))
         print('task_instance :' + str(kwargs['ti']))
        
-    python_t1 >> python_function2
+    python_t1 >> python_function2()
     
