@@ -10,6 +10,8 @@ with DAG(
     catchup=False
 ) as dag:
     class CustomBranchOperator(BaseBranchOperator):
+        # choose_branch 이름을 그대로 사용해야 함
+        # BaseBranchOperator의 choose_branch를 오버라이딩 해서 사용해야 하기 때문문
         def choose_branch(self, context):
             import random
             print(context)
